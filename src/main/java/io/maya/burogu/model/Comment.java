@@ -23,6 +23,7 @@ public class Comment {
     Integer postId;
     private @Column(name = "created_at")
     LocalDateTime createdAt;
+    private Boolean active;
     private @ManyToOne
     @JoinColumn(name = "author_id", updatable = false, insertable = false)
     User user;

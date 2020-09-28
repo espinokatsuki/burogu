@@ -29,6 +29,7 @@ public class Post {
     Integer upVotes;
     private @Column(name = "down_votes")
     Integer downVotes;
+    private Boolean active;
     private @ManyToOne
     @JoinColumn(name = "author_id", updatable = false, insertable = false)
     User user;

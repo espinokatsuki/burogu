@@ -22,6 +22,7 @@ public class User {
     private String email;
     private String biography;
     private String avatar;
+    private Boolean active;
     private @OneToMany(mappedBy = "user", cascade = {CascadeType.ALL})
     List<Subreddit> subreddits;
     private @OneToMany(mappedBy = "user", cascade = {CascadeType.ALL})
