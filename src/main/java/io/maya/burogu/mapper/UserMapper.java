@@ -12,6 +12,7 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface UserMapper {
     UserDto toUserDto(User user);
+
     List<UserDto> toUserDtoList(List<User> users);
 
     @Mappings({
@@ -23,5 +24,6 @@ public interface UserMapper {
     })
     @InheritInverseConfiguration
     User toUser(UserDto userDto);
+
     List<User> toUserList(List<UserDto> userDtos);
 }
